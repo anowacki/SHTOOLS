@@ -234,7 +234,8 @@ def configuration(parent_package='', top_path=None):
     config.add_extension('pyshtools._SHTOOLS',
                          include_dirs=[libdir],
                          library_dirs=[libdir],
-                         libraries=['SHTOOLS', 'fftw3', 'm', 'lapack', 'blas'],
+                         libraries=['SHTOOLS', 'fftw3', 'm', 'lapack',
+                             'f77blas', 'cblas', 'atlas'],
                          sources=['src/pyshtools.pyf',
                                   'src/PythonWrapper.f95'],
                          **kwargs)
